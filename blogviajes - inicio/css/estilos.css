@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+    font-size:62.5%; /**reset para REMS - 62.5% = 10px de 16px **/
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    margin:0; /** porque no funciono el normalize **/
+    line-height: 2;
+  }
+/* globales */
+  img {
+      max-width: 100%;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 2;
+}
+.boton{
+    background-color: #00BFFF ;
+    padding: 10px 60px;
+    display: inline-block; /*permite controlar el margen*/
+    text-decoration: none;
+    margin-top: 10px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color .3s ease-in-out; /* determinas el tiempo que cambia de color cuando utilizas hover*/
+    
+}
+.boton:hover {
+    background-color: aqua;
+}
+  /* Body */
+
+  .site-header{
+      padding: 10px;
+  }
+  .contenedor {
+      max-width: 1200px;
+      margin: 0 auto; /* para centrar tu lados */
+      /*overflow: auto; /* para corregit el problema de los float*/
+  }
+  /**Navegación
+  
+  también corrije el problema de los float*/
+   .clearfix::after {
+      content: '';
+      clear: both;
+      display: block;
+   }
+   
+  .barra{
+      background-color: #FF1493;
+      margin-top: 40px;
+     
+  }
+  .navegacion-principal a {
+    color : #ffffff;  
+    text-decoration: none;
+    font-size: 22px; /** va ser igual a 18px*/
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+  @media (min-width: 768px) {
+    .navegacion-principal a {
+        display: inline-block;
+   }
+  }
+  .navegacion-principal a:hover {
+   background-color: #008BE4; 
+  }
+  /* Contenido principal */
+  .contenido-principal{
+    margin-top: 40px;
+  }
+.contenido-principal, .sidebar{
+padding: 20px;
+
+}
+@media (min-width:768px) {
+    
+  .contenido-principal {
+      width: 70%;
+      float:left;
+      padding: 0 60px 0 0;
+      
+  }
+  .sidebar {
+     width: 30%;
+     float:right;
+     padding: 0;
+     margin-top: 40px;
+ }
+}
+/** Entredas de blog **/
+h2{
+    color : #33D7FF;
+    margin-bottom: 20px;
+}
+.entrada {
+    margin-bottom: 60px;
+
+}
+.entrada :last-of-type {
+    margin-bottom: 0;
+}
+.entrada img{
+    display:block; /*gnerarmente las imagenes son display:line;*/
+}
+@media (min-width: 400px) {
+    .entrada img{
+        width:300px;
+        float:left;
+        margin: 0 30px 0 0;
+    }
+}
+.entrada p{
+    text-align: justify;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+
+}
+.sidebar ul li {
+    padding: 10px;
+
+}
+.sidebar ul li:hover{
+    background-color: #008BE4;
+}
+.sidebar ul li a{
+    color: #008BE4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sidebar ul li:hover a{
+  color: #ffffff;
+}
